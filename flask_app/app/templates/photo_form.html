@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Photo and Price Output</h1>
+    <h2> ${{price}} </h2>
+    <h3> {{address}} </h3><br>
+
+
+    <img src = 'http://localhost:5000//uploads/{{filename}}'  height ='600' width = '600'> </img>
+
+    <img src = 'http://localhost:5000//uploads/{{goog_photo}}' height = '600' width = '600'> </img>
+<br>
+<br>
+<br>
+    <form action="{{ url_for('surveyform') }}" method="POST" enctype='multipart/form-data' novalidate>
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.extranotes.label }}<br>
+            {{ form.extranotes(size=50) }}<br><br>
+        </div>
+        <div>
+             {{ form.multiple.label }}<br>
+             {{ form.multiple(size=5) }}<br><br>
+         </div>
+        <div>
+            {{ form.dropdown.label }}<br>
+            {{ form.dropdown(size=2) }}<br><br>
+        </div>
+        <div>
+            {{ form.singletext.label }}<br>
+            {{ form.singletext }}<br><br>
+       </div>
+        <div>
+            {{ form.outer.label }}<br>
+            {{ form.outer(size=2) }}<br><br>
+        </div>
+        <div>
+            {{ form.interior.label }}<br>
+            {{ form.interior(size=2) }}<br><br>
+        </div>
+        <div>
+            {{ form.exterior.label }}<br>
+            {{ form.exterior(size=2) }}<br><br>
+        </div>
+
+
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

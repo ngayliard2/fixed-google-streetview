@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Saved to database: </h1>
+<br>
+<br><pre>Name of Disaster:     {{notes}}</pre>
+<br><pre>Type of Disaster:     {{multiple}}</pre>
+<br><pre>Main Building:        {{dropdown}}</pre>
+<br><pre>Percentage damaged:   {{single}}</pre>
+<br><pre>Outer Buildings:      {{outer}}</pre>
+<br><pre>Interior Damage:      {{exterior}}</pre>
+<br><pre>Exterior Damage:      {{interior}}</pre>
+{% endblock %}

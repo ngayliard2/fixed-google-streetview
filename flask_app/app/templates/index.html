@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Photo to Streetview and Price</h1>
+    <form action="" method="POST" enctype='multipart/form-data' novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.photo.label }}<br>
+            {{ form.photo(size=32) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

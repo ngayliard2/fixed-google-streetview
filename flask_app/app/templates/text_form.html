@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Photo and Price Output</h1>
+    <h2> {{address}} </h2>
+    <h2> ${{price}} </h2>
+
+    <p> <img src = 'http://localhost:5000//uploads/{{file_path}}' height = '600' width = '600'> </img></p>
+{% endblock %}
